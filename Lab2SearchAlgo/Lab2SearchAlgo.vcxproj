@@ -89,6 +89,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\labs\sem_3\Lab2\Lab2SearchAlgo\libs;D:\labs\sem_3\Lab2\Lab2SearchAlgo\ATD;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,6 +154,8 @@
     <ClInclude Include="HelperFunctions.hpp" />
     <ClInclude Include="HelperIO.hpp" />
     <ClInclude Include="IDictionary.hpp" />
+    <ClInclude Include="IMatrix.hpp" />
+    <ClInclude Include="SparseMatrix.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,3 +1,22 @@
 ﻿  main.cpp
-D:\labs\sem_3\Lab2\Lab2SearchAlgo\main.cpp(119,10): warning C4101: p: неиспользованная локальная переменная
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\ATD\DynamicArray.h(50,13): warning C4018: >=: несоответствие типов со знаком и без знака
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\ATD\DynamicArray.h(49): message : во время компиляции функции-члена класс шаблон "T &sequences::DynamicArray<T>::get(size_t)"
+          with
+          [
+              T=int
+          ]
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\IMatrix.hpp(84): message : выполняется компиляция ссылки на экземпляр шаблон функции "T &sequences::DynamicArray<T>::get(size_t)"
+          with
+          [
+              T=int
+          ]
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\IMatrix.hpp(64): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "sequences::DynamicArray<T>"
+          with
+          [
+              T=int
+          ]
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\IMatrix.hpp(60): message : во время компиляции функции-члена класс шаблон "Matrix<int>::Matrix(const Matrix<int> &)"
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\main.cpp(20): message : выполняется компиляция ссылки на экземпляр шаблон функции "Matrix<int>::Matrix(const Matrix<int> &)"
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\main.cpp(14): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Matrix<int>"
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\SparseMatrix.hpp(97): warning C4172: возвращение адреса локальной или временной переменной
   Lab2SearchAlgo.vcxproj -> D:\labs\sem_3\Lab2\Lab2SearchAlgo\Debug\Lab2SearchAlgo.exe

@@ -203,12 +203,6 @@ namespace dictionary
 			return HashMapIterator<K, V>();
 		}
 	public:
-		//template<class K1, class V1>
-		//friend std::ostream& operator<<(std::ostream& out, HashMap<K1, V1>& map);
-		//Map must have the right type and be initialized with the right hash function
-		//template<class K1, class V1>
-		//friend std::istream& operator>>(std::istream& in, HashMap<K1, V1>& map);
-	public:
 		~HashMap()
 		{
 			for (int i = 0; i < GetCapacity(); i++)
@@ -236,6 +230,25 @@ std::ostream& operator<<(std::ostream& out, const dictionary::HashMap<K1, V1>& h
 
 	return out;
 }
+
+
+
+//template<class K1, class V1>
+//std::ostream& operator<<(std::ostream& out, const dictionary::HashMap<K1, V1>* hashMap)
+//{
+//	out << "{ ";
+//
+//	dictionary::HashMapIterator<K1, V1> iter = hashMap->Iterator();
+//
+//	for (; iter != hashMap->End(); ++iter)
+//	{
+//		out << *iter << " ";
+//	}
+//
+//	out << "}";
+//
+//	return out;
+//}
 
 //Map must have the right type and be initialized with the right hash function
 template<class K1, class V1>

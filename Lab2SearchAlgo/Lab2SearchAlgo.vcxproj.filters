@@ -22,6 +22,9 @@
     <Filter Include="Cache">
       <UniqueIdentifier>{dd041a95-5fb1-4bf4-a47f-c5eaec70267d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Matrix">
+      <UniqueIdentifier>{419b0a87-f3e4-4043-907e-387faf248407}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HashMap.hpp">
@@ -41,6 +44,12 @@
     </ClInclude>
     <ClInclude Include="CachedSequence.hpp">
       <Filter>Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="IMatrix.hpp">
+      <Filter>Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="SparseMatrix.hpp">
+      <Filter>Matrix</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

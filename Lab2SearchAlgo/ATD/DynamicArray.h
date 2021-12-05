@@ -46,6 +46,15 @@ namespace sequences {
 				return elements[index];
 		}
 
+		T& get(std::size_t index){
+			if(index >= this->capacity) throw std::out_of_range("Array index is out of bounds");
+
+			return this->elements[index];
+		}
+		const T& get(std::size_t index) const{
+			return const_cast<T&>(const_cast<const DynamicArray<T>*>(this)->get(index));
+		}
+
 		int GetCapacity() const
 		{
 			return capacity;
