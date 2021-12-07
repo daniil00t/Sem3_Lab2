@@ -18,7 +18,7 @@ public:
 template <typename T>
 class Matrix : IMatrix<T> {
 private:
-	DynamicArray<DynamicArray<T>*>* data;
+	DynamicArray< DynamicArray<T>* >  *data;
 
 public:
 	Matrix(T const* const* data, std::size_t width, std::size_t height);

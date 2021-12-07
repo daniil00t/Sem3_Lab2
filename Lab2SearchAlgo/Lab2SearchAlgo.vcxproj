@@ -120,6 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,7 +156,9 @@
     <ClInclude Include="HelperIO.hpp" />
     <ClInclude Include="IDictionary.hpp" />
     <ClInclude Include="IMatrix.hpp" />
+    <ClInclude Include="Interface.hpp" />
     <ClInclude Include="SparseMatrix.hpp" />
+    <ClInclude Include="UI.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

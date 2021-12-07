@@ -25,6 +25,9 @@
     <Filter Include="Matrix">
       <UniqueIdentifier>{419b0a87-f3e4-4043-907e-387faf248407}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{eae8d8fa-ecfe-4c1d-9328-66c76c436786}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HashMap.hpp">
@@ -50,6 +53,12 @@
     </ClInclude>
     <ClInclude Include="SparseMatrix.hpp">
       <Filter>Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.hpp">
+      <Filter>UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#include "Interface.hpp"
+#include <iostream>
 #include <fstream>
 #include <cstdlib>
 #include "HashMap.hpp"
@@ -9,19 +10,21 @@
 #include "IMatrix.hpp"
 #include "SparseMatrix.hpp"
 
+
+using namespace std;
+
+
 int main()
 {
-	Matrix<int> M(2, 2);
-	M.set(13, 0, 0);
-	M.set(13, 0, 1);
-	M.set(13, 1, 0);
-	M.set(13, 1, 1);
+	//Interface::start();
 
+	Matrix<int> M(20, 20);
+	M.set(10, 10, 10);
+	M.set(10, 11, 10);
+	M.set(10, 12, 10);
 	SparseMatrix<int> SM(M, 0);
-
-	std::cout << SM.getData();
+	//SM.set(10, 0, 0);
+	cout << SM.getData();
 	
-
-
 	return 0;
 }

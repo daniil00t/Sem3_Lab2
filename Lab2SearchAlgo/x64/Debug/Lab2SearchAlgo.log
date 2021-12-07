@@ -1,0 +1,25 @@
+﻿  main.cpp
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(42,20): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(42,23): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(70,27): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(57,21): warning C4101: run: неиспользованная локальная переменная
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\IMatrix.hpp(52,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\IMatrix.hpp(51): message : во время компиляции функции-члена класс шаблон "Matrix<int>::Matrix(size_t,size_t)"
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\Interface.hpp(39): message : выполняется компиляция ссылки на экземпляр шаблон функции "Matrix<int>::Matrix(size_t,size_t)"
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\Interface.hpp(39): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Matrix<int>"
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\IMatrix.hpp(55,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\IMatrix.hpp(89,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\IMatrix.hpp(88): message : во время компиляции функции-члена класс шаблон "void Matrix<int>::set(const T &,size_t,size_t)"
+          with
+          [
+              T=int
+          ]
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\main.cpp(22): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Matrix<int>::set(const T &,size_t,size_t)"
+          with
+          [
+              T=int
+          ]
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(146): warning C4715: UI::Selector: значение возвращается не при всех путях выполнения
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\Interface.hpp(63): warning C4715: Interface::SparseMatrixInterface: значение возвращается не при всех путях выполнения
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\SparseMatrix.hpp(97): warning C4172: возвращение адреса локальной или временной переменной
+  Lab2SearchAlgo.vcxproj -> D:\labs\sem_3\Lab2\Lab2SearchAlgo\x64\Debug\Lab2SearchAlgo.exe
