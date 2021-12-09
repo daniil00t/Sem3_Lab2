@@ -30,15 +30,14 @@ int Interface::SparseMatrixInterface() {
 	
 	UI::clear(0, 0);
 
-	int width, height;
-	width = UI::InputNumber("Input width");
+	std::size_t width, height;
+	width = (std::size_t)UI::InputNumber("Input width");
 	UI::clear(0, 0);
-	height = UI::InputNumber("Input height");
+	height = (std::size_t)UI::InputNumber("Input height");
 
+	SparseMatrix<int> SM(width, height, 0);
 	while (choice != 2) {
-		Matrix<int> M(width, height);
-		SparseMatrix<int> SM(M, 0);
-
+		SM.set(10, 23, 4);
 
 		string options[] = { "Add element", "Print Matrix", "return back" };
 		choice = UI::Selector("Select Type of Data", 2, options, 5, 7);
@@ -49,11 +48,11 @@ int Interface::SparseMatrixInterface() {
 		switch (choice) {
 		case 0:
 			UI::MultiInputNumber(questions, 3, adders);
-			cout << "--------------------------------------" <<adders[0] << adders[1] << adders[2] << "\n";
-			SM.set(adders[0], adders[1], adders[2]);
+			SM.set((int)adders[0], (int)adders[1], (int)adders[2]);
+			cout << "--------------------------------------" << adders[0] << adders[1] << adders[2] << "\n";
 			break;
 		case 1:
-			cout << SM.getData();
+			SM.print();
 			break;
 
 		default:

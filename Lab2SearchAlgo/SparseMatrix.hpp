@@ -3,6 +3,7 @@
 #include <cstddef>
 
 #include "HashMap.hpp"
+#include "HashMapIterator.hpp"
 #include "IMatrix.hpp"
 using namespace dictionary;
 
@@ -37,6 +38,7 @@ public:
 
 	SparseMatrix(Matrix<T>, T zero = T()); //convert Matrix to SparseMatrix
 	SparseMatrix(T zero);
+	SparseMatrix(std::size_t width, std::size_t height, T zero);
 	virtual ~SparseMatrix();
 
 	virtual T& get(std::size_t x, std::size_t y) override;
@@ -49,7 +51,8 @@ public:
 
 	bool isZero(std::size_t x, std::size_t y) const;
 
-	HashMap<Point, T>& getData();
+	//HashMap<Point, T>& getData();
+	std::unique_ptr<HashMap<Point, T>> getData();
 	void print();
 };
 
@@ -74,6 +77,16 @@ SparseMatrix<T>::SparseMatrix(Matrix<T> matrix, T zero) : zero(zero) {
 template <typename T>
 SparseMatrix<T>::SparseMatrix(T zero)
 	: zero(zero) {}
+
+template <typename T>
+SparseMatrix<T>::SparseMatrix(std::size_t width, std::size_t height, T zero)
+	: zero(zero), width(width), height(height) {
+	this->data = new HashMap<Point, T>(
+		[](Point p, int tableSize)->int
+		{
+			return (p.x + p.y) % tableSize;
+		});
+}
 
 template <typename T>
 SparseMatrix<T>::~SparseMatrix() {
@@ -112,13 +125,18 @@ bool SparseMatrix<T>::isZero(std::size_t x, std::size_t y) const {
 	return !this->data->Contains({ x,y });
 }
 
+//template <typename T>
+//HashMap<Point, T>& SparseMatrix<T>::getData() {
+//	return *this->data;
+//}
 template <typename T>
-HashMap<Point, T>& SparseMatrix<T>::getData() {
-	return *this->data;
+std::unique_ptr<HashMap<Point, T>> SparseMatrix<T>::getData() {
+	return std::make_unique<HashMap<Point, T>>(*this->data);
 }
 
 template <typename T>
 void SparseMatrix<T>::print() {
+
 	std::cout << "{ ";
 
 	HashMapIterator<Point, T> iter = this->data->Iterator();

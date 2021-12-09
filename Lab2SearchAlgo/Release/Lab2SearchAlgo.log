@@ -1,0 +1,32 @@
+﻿  main.cpp
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(42,20): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(42,23): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(68,24): warning C4018: <: несоответствие типов со знаком и без знака
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(57,21): warning C4101: run: неиспользованная локальная переменная
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(158,23): warning C4018: <: несоответствие типов со знаком и без знака
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\HashMap.hpp(83,1): error C2678: бинарный "!=": не найден оператор, принимающий левый операнд типа "_Ty1" (или приемлемое преобразование отсутствует)
+          with
+          [
+              _Ty1=Point
+          ]
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\guiddef.h(197,15): message : может быть "bool operator !=(const GUID &,const GUID &)"
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\HashMap.hpp(83,1): message : при попытке сопоставить список аргументов "(_Ty1, K)"
+          with
+          [
+              _Ty1=Point
+          ]
+          and
+          [
+              K=Point
+          ]
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\HashMap.hpp(74): message : во время компиляции функции-члена класс шаблон "void dictionary::HashMap<Point,T>::Remove(K)"
+          with
+          [
+              T=int,
+              K=Point
+          ]
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\Interface.hpp(56): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "dictionary::HashMap<Point,T>"
+          with
+          [
+              T=int
+          ]

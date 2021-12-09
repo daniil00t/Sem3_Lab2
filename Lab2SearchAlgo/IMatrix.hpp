@@ -18,10 +18,10 @@ public:
 template <typename T>
 class Matrix : IMatrix<T> {
 private:
-	DynamicArray< DynamicArray<T>* >  *data;
+	DynamicArray< DynamicArray<T>* >  *__data;
 
 public:
-	Matrix(T const* const* data, std::size_t width, std::size_t height);
+	Matrix(T const* const* __data, std::size_t width, std::size_t height);
 	Matrix(std::size_t width, std::size_t height);
 	Matrix(const Matrix<T>&);
 	virtual ~Matrix();
@@ -36,42 +36,42 @@ public:
 };
 
 template <typename T>
-Matrix<T>::Matrix(T const* const* data, std::size_t width, std::size_t height) {
-	this->data = new DynamicArray<DynamicArray<T>*>(width);
+Matrix<T>::Matrix(T const* const* __data, std::size_t width, std::size_t height) {
+	this->__data = new DynamicArray<DynamicArray<T>*>(width);
 	for (std::size_t i = 0; i < width; i++) {
-		this->data->get(i) = new DynamicArray<T>(height);
+		this->__data->get(i) = new DynamicArray<T>(height);
 
 		for (std::size_t j = 0; j < height; j++)
-			this->data->get(i)->Set(data[i][j], j);
+			this->__data->get(i)->Set(__data[i][j], j);
 
 	}
 }
 
 template <typename T>
 Matrix<T>::Matrix(std::size_t width, std::size_t height) {
-	this->data = new DynamicArray<DynamicArray<T>*>(width);
+	this->__data = new DynamicArray<DynamicArray<T>*>(width);
 
 	for (std::size_t i = 0; i < width; i++) {
-		this->data->get(i) = new DynamicArray<T>(height);
+		this->__data->get(i) = new DynamicArray<T>(height);
 	}
 }
 
 template <typename T>
 Matrix<T>::Matrix(const Matrix<T>& other) {
-	this->data = new DynamicArray<DynamicArray<T>*>(*other.data);
+	this->__data = new DynamicArray<DynamicArray<T>*>(*other.__data);
 
 	for (std::size_t i = 0; i < other.getWidth(); i++) {
-		this->data->get(i) = new DynamicArray<T>(*other.data->get(i));
+		this->__data->get(i) = new DynamicArray<T>(*other.__data->get(i));
 	}
 }
 
 template <typename T>
 Matrix<T>::~Matrix() {
 	for (std::size_t i = 0; i < this->getWidth(); i++) {
-		delete this->data->get(i);
+		delete this->__data->get(i);
 	}
 
-	delete this->data;
+	delete this->__data;
 }
 
 template <typename T>
@@ -81,23 +81,23 @@ T& Matrix<T>::get(std::size_t x, std::size_t y) {
 
 template <typename T>
 const T& Matrix<T>::get(std::size_t x, std::size_t y) const {
-	return this->data->get(x)->get(y);
+	return this->__data->get(x)->get(y);
 }
 
 template <typename T>
 void Matrix<T>::set(const T& item, std::size_t x, std::size_t y) {
-	this->data->get(x)->Set(item, y);
+	this->__data->get(x)->Set(item, y);
 }
 
 
 template <typename T>
 std::size_t Matrix<T>::getWidth() const {
-	return this->data->GetCapacity();
+	return this->__data->GetCapacity();
 }
 
 template <typename T>
 std::size_t Matrix<T>::getHeight() const {
-	if (this->data->GetCapacity() == 0) return 0;
+	if (this->__data->GetCapacity() == 0) return 0;
 
-	return this->data->get(0)->GetCapacity();
+	return this->__data->get(0)->GetCapacity();
 }

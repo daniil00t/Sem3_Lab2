@@ -13,7 +13,7 @@ namespace sequences {
 
 		T* elements;
 
-		int capacity;
+		int capacity = 0;
 
 	public:
 
@@ -89,10 +89,11 @@ namespace sequences {
 
 	public:
 
-		~DynamicArray()
+		virtual ~DynamicArray()
 		{
 			//free(elements);
 			delete[] elements;
+			capacity = 0;
 		}
 	};
 }

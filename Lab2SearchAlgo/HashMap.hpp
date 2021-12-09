@@ -45,6 +45,9 @@ namespace dictionary
 			for (int i = 0; i < size; i++)
 				table->Set(new LinkedList<KeyValuePair>, i);
 		}
+		virtual DynamicArray<LinkedList<KeyValuePair>*>* GetTable() {
+			return table;
+		}
 	public:
 		virtual void Add(KeyValuePair pair)
 		{
@@ -208,7 +211,7 @@ namespace dictionary
 			for (int i = 0; i < GetCapacity(); i++)
 				delete(table->Get(i));
 
-			delete(table);
+			delete table;
 		}
 	};
 
