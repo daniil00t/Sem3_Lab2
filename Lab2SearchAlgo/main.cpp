@@ -18,9 +18,15 @@ int main()
 {
 	Interface::start();
 
-	/*SparseMatrix<int> SM(10, 10, 0);
-	SM.set(10, 0, 0);
-	SM.print();*/
+	//SparseMatrix<int> SM(10, 10, 0);
+	//SM.set(10, 0, 0);
+	//SM.map(
+	//	[](int p) -> int {
+	//		cout << p * 2;
+	//		return p * 2;
+	//	}
+	//);
+	//SM.print();
 
 	//HashMap<int, int>HM(
 	//	[](int p, int tableSize)->int
@@ -28,9 +34,22 @@ int main()
 	//		return p % tableSize;
 	//	}, 100);
 	//HM.Add({ 0, 1 });
-	//HM.Add({ 100, 1100000 });
-	//HM.Add({ 101, 1100000 });
-	//HM.Add({ 102, 1100020 });
+	//HM.Add({ 100, 2 });
+	//HM.Add({ 101, 3 });
+	//HM.Add({ 102, 4 });
+
+	//HashMapIterator<int, int> iter = HM.Iterator();
+	//for (; iter != HM.End(); ++iter)
+	//{
+	//	HM.Add((*iter).first, (*iter).second * 2);
+	//}
+
+	//HM.Map(
+	//	[](int p) -> int {
+	//		cout << p;
+	//		return p;
+	//	}
+	//);
 
 	//std::function<int(int, int)> func = [](int p, int tableSize)->int
 	//{
@@ -52,5 +71,6 @@ int main()
 
 	//cout << HM;
 	
+	//system("pause");
 	return 0;
 }

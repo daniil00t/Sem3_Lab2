@@ -14,6 +14,7 @@ namespace dictionary {
 		virtual bool Contains(K key) const = 0;
 
 		virtual IDictionary<K, V>* Map(std::function<V(V)>) const = 0;
+		//virtual void __Map(std::function<V(V)>) = 0;
 
 		virtual int Count() const = 0;
 		virtual int GetCapacity() const = 0;

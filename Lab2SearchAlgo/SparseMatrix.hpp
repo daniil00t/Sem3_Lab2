@@ -54,6 +54,7 @@ public:
 	//HashMap<Point, T>& getData();
 	std::unique_ptr<HashMap<Point, T>> getData();
 	void print();
+	void map(std::function<T(T)>);
 };
 
 template <typename T>
@@ -149,3 +150,11 @@ void SparseMatrix<T>::print() {
 	std::cout << "}";
 }
 
+template <typename T>
+void SparseMatrix<T>::map(std::function<T(T)> func) {
+	HashMapIterator<Point, T> iter = this->data->Iterator();
+	for (; iter != this->data->End(); ++iter)
+	{
+		this->data->Add((*iter).first, func((*iter).second));
+	}
+}

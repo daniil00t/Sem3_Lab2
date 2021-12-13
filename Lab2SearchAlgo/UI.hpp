@@ -19,6 +19,7 @@ public:
 	static int Selector(std::string name_selector, int count_options, std::string* options, int x, int y);
 	static int InputNumber(string answer);
 	static int* MultiInputNumber(string* answers, int count, int* ns);
+	static string* MultiInputString(string* answers, int count, string* ns);
 	static string InputString(string answer);
 };
 
@@ -26,11 +27,11 @@ public:
 
 void UI::welcome() {
 	cout << R"(
-			 _          _    ____
-			| |    __ _| |__|___ \
-			| |   / _` | '_ \ __) |
-			| |__| (_| | |_) / __/
-			|_____\__,_|_.__/_____|
+						 _          _    ____
+						| |    __ _| |__|___ \
+						| |   / _` | '_ \ __) |
+						| |__| (_| | |_) / __/
+						|_____\__,_|_.__/_____|
 	)";
 }
 void UI::gotoXY(int x, int y) {
@@ -152,8 +153,18 @@ int UI::InputNumber(string answer) {
 	cout << "\n---------------------------------------------\n";
 	return n;
 }
-
 int* UI::MultiInputNumber(string* answers, int count, int* ns) {
+	cout << "\n---------------------------------------------\n";
+	for (size_t i = 0; i < count; i++){
+		cout << answers[i] << "\n";
+		cout << "> ";
+		cin >> ns[i];
+		cout << "\n";
+	}
+	cout << "\n---------------------------------------------\n";
+	return ns;
+}
+string* UI::MultiInputString(string* answers, int count, string* ns) {
 	cout << "\n---------------------------------------------\n";
 	for (size_t i = 0; i < count; i++){
 		cout << answers[i] << "\n";

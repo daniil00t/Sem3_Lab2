@@ -1,5 +1,30 @@
-#include "pch.h"
-#include "Person.hpp"
+#pragma once
+#include <string>
+#include <ctime>
+
+using std::string;
+
+typedef unsigned long long ID_t;
+
+class Person {
+private:
+	ID_t id;
+	string firstName;
+	string lastName;
+	int age;
+public:
+	Person();
+	Person(string firstname, string lastname, int age_, ID_t id_ = time(nullptr));
+public:
+	ID_t GetID();
+	string GetFirstName();
+	string GetLastName();
+	void SetFirstName(string firstname);
+	void SetLastName(string lastname);
+	void SetID(ID_t id_);
+	int GetAge();
+	void SetAge(int age);
+};
 
 Person::Person() :
 	id(time(nullptr)),
@@ -7,12 +32,14 @@ Person::Person() :
 	lastName(""),
 	age(0)
 {}
+
 Person::Person(string firstname, string lastname, int age_, ID_t id_) :
 	id(id_),
 	firstName(firstname),
 	lastName(lastname),
 	age(age_)
 {}
+
 ID_t Person::GetID()
 {
 	return id;
@@ -49,3 +76,4 @@ void Person::SetAge(int age_)
 	else
 		age = age_;
 }
+

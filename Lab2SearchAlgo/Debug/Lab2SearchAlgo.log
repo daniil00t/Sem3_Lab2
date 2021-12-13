@@ -1,10 +1,16 @@
 ﻿  main.cpp
-D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(42,20): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
-D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(42,23): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
-D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(68,24): warning C4018: <: несоответствие типов со знаком и без знака
-D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(57,21): warning C4101: run: неиспользованная локальная переменная
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(43,20): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(43,23): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(69,24): warning C4018: <: несоответствие типов со знаком и без знака
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(58,21): warning C4101: run: неиспользованная локальная переменная
 D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(158,23): warning C4018: <: несоответствие типов со знаком и без знака
-D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(146): warning C4715: UI::Selector: значение возвращается не при всех путях выполнения
-D:\labs\sem_3\Lab2\Lab2SearchAlgo\Interface.hpp(62): warning C4715: Interface::SparseMatrixInterface: значение возвращается не при всех путях выполнения
-D:\labs\sem_3\Lab2\Lab2SearchAlgo\SparseMatrix.hpp(110): warning C4172: возвращение адреса локальной или временной переменной
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(169,23): warning C4018: <: несоответствие типов со знаком и без знака
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\Interface.hpp(301,11): warning C4101: p: неиспользованная локальная переменная
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\UI.hpp(147): warning C4715: UI::Selector: значение возвращается не при всех путях выполнения
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\Interface.hpp(381): warning C4715: Interface::loop: значение возвращается не при всех путях выполнения
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\Interface.hpp(355): warning C4715: Interface::CacheInterface: значение возвращается не при всех путях выполнения
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\Interface.hpp(282): warning C4715: Interface::HashMapInterface: значение возвращается не при всех путях выполнения
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\Interface.hpp(157): warning C4715: Interface::SparseMatrixInterface: значение возвращается не при всех путях выполнения
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\SparseMatrix.hpp(111): warning C4172: возвращение адреса локальной или временной переменной
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\SparseMatrix.hpp(111): warning C4172: возвращение адреса локальной или временной переменной
   Lab2SearchAlgo.vcxproj -> D:\labs\sem_3\Lab2\Lab2SearchAlgo\Debug\Lab2SearchAlgo.exe

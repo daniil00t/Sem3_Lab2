@@ -2,7 +2,8 @@
 #include <fstream>
 #include <cstdlib>
 #include "CppUnitTest.h"
-#include "Person.hpp"
+#include "../CachedSequence.hpp"
+#include "../ATD/Person.hpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

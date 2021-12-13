@@ -130,11 +130,19 @@ namespace dictionary
 
 			iterator iter = Iterator();
 
-			for (; iter != End(); ++iter)
+			for (; iter != End(); ++iter) {
 				res->Add((*iter).first, f((*iter).second));
+			}
 
 			return res;
 		}
+		//void __Map(std::function<V(V)> f) const
+		//{
+		//	iterator iter = this->Iterator();
+
+		//	for (; iter != this->End(); ++iter)
+		//		this->Add((*iter).first, f((*iter).second));
+		//}
 	private:
 		int Hash(K key) const
 		{
@@ -204,6 +212,14 @@ namespace dictionary
 		iterator End() const
 		{
 			return HashMapIterator<K, V>();
+		}
+	public:
+		void operator=(dictionary::HashMap<K, V> hashMap) {
+			~HashMap();
+			iterator iter = hashMap.Iterator();
+
+			for (; iter != End(); ++iter)
+				this->Add((*iter).first, f((*iter).second));
 		}
 	public:
 		~HashMap()

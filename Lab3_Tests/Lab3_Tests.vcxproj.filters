@@ -21,9 +21,6 @@
     <ClCompile Include="pch.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Person.cpp">
-      <Filter>dataSets</Filter>
-    </ClCompile>
     <ClCompile Include="Tests.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -31,9 +28,6 @@
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Person.hpp">
-      <Filter>dataSets</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
