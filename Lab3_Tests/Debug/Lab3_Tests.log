@@ -1,6 +1,24 @@
-﻿  pch.cpp
-  Tests.cpp
-D:\labs\sem_3\Lab2\Lab3_Tests\Person.hpp(10,10): fatal error C1083: Не удается открыть файл включение: ../ATD/TestEnvironment.h: No such file or directory,
-  Person.cpp
-D:\labs\sem_3\Lab2\Lab3_Tests\Person.hpp(10,10): fatal error C1083: Не удается открыть файл включение: ../ATD/TestEnvironment.h: No such file or directory,
-  Создание кода...
+﻿  Tests.cpp
+D:\labs\sem_3\Lab2\Lab3_Tests\Tests.cpp(39,12): warning C4101: p: неиспользованная локальная переменная
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\ATD\DynamicArray.h(50,13): warning C4018: >=: несоответствие типов со знаком и без знака
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\ATD\DynamicArray.h(49): message : во время компиляции функции-члена класс шаблон "T &sequences::DynamicArray<T>::get(size_t)"
+          with
+          [
+              T=sequences::DynamicArray<int> *
+          ]
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\IMatrix.hpp(64): message : выполняется компиляция ссылки на экземпляр шаблон функции "T &sequences::DynamicArray<T>::get(size_t)"
+          with
+          [
+              T=sequences::DynamicArray<int> *
+          ]
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\IMatrix.hpp(61): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "sequences::DynamicArray<sequences::DynamicArray<T> *>"
+          with
+          [
+              T=int
+          ]
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\IMatrix.hpp(60): message : во время компиляции функции-члена класс шаблон "Matrix<int>::Matrix(const Matrix<int> &)"
+D:\labs\sem_3\Lab2\Lab3_Tests\Tests.cpp(104): message : выполняется компиляция ссылки на экземпляр шаблон функции "Matrix<int>::Matrix(const Matrix<int> &)"
+D:\labs\sem_3\Lab2\Lab3_Tests\Tests.cpp(100): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Matrix<int>"
+D:\labs\sem_3\Lab2\Lab2SearchAlgo\SparseMatrix.hpp(111): warning C4172: возвращение адреса локальной или временной переменной
+     Создается библиотека D:\labs\sem_3\Lab2\Lab2SearchAlgo\Debug\Lab3_Tests.lib и объект D:\labs\sem_3\Lab2\Lab2SearchAlgo\Debug\Lab3_Tests.exp
+  Lab3_Tests.vcxproj -> D:\labs\sem_3\Lab2\Lab2SearchAlgo\Debug\Lab3_Tests.dll

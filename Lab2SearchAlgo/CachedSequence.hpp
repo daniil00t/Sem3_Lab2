@@ -53,10 +53,6 @@ public:
 			res = fromArray.second;
 			PutInCache(fromArray);
 		}
-
-		//std::cout << ((Node<KeyValuePair>*)cacheList->begin())->GetContent().first
-			//<< *dynamic_cast<HashMap<K, PrevCacheItemIter*>*>(cacheTable) << std::endl;
-
 		return res;
 	}
 private:

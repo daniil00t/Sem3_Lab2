@@ -19,7 +19,6 @@ namespace dictionary {
 		virtual int Count() const = 0;
 		virtual int GetCapacity() const = 0;
 
-		virtual ~IDictionary()
-		{};
+		virtual ~IDictionary(){};
 	};
 }

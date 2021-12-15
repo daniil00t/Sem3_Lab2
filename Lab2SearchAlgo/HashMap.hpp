@@ -136,13 +136,6 @@ namespace dictionary
 
 			return res;
 		}
-		//void __Map(std::function<V(V)> f) const
-		//{
-		//	iterator iter = this->Iterator();
-
-		//	for (; iter != this->End(); ++iter)
-		//		this->Add((*iter).first, f((*iter).second));
-		//}
 	private:
 		int Hash(K key) const
 		{
@@ -224,10 +217,10 @@ namespace dictionary
 	public:
 		~HashMap()
 		{
-			for (int i = 0; i < GetCapacity(); i++)
+			/*for (int i = 0; i < GetCapacity(); i++)
 				delete(table->Get(i));
 
-			delete table;
+			delete table;*/
 		}
 	};
 
@@ -250,24 +243,6 @@ std::ostream& operator<<(std::ostream& out, const dictionary::HashMap<K1, V1>& h
 	return out;
 }
 
-
-
-//template<class K1, class V1>
-//std::ostream& operator<<(std::ostream& out, const dictionary::HashMap<K1, V1>* hashMap)
-//{
-//	out << "{ ";
-//
-//	dictionary::HashMapIterator<K1, V1> iter = hashMap->Iterator();
-//
-//	for (; iter != hashMap->End(); ++iter)
-//	{
-//		out << *iter << " ";
-//	}
-//
-//	out << "}";
-//
-//	return out;
-//}
 
 //Map must have the right type and be initialized with the right hash function
 template<class K1, class V1>
